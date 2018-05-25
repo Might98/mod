@@ -1,45 +1,45 @@
 <?php
 
 /*
-	Слив by Relevant-Craft.SU
+	Г‘Г«ГЁГў by Relevant-Craft.SU
 
 	=========================
 
-	СТАНЬ ХАКЕРОМ
-	В ОДИН КЛИК!
+	Г‘Г’ГЂГЌГњ Г•ГЂГЉГ…ГђГЋГЊ
+	Г‚ ГЋГ„Г€ГЌ ГЉГ‹Г€ГЉ!
 */
 
 	if(!defined('INCLUDE_CHECK')) die("You don't have permissions to run this");
-	$skinpath = "http://***.ru/skins/%s.png";///путь к скинам
-	$cloakpath = "http://***.ru/cloaks/%s.png";///путь к плащам
-	///Настройки MySQL///
+	$skinpath = "http://***.ru/skins/%s.png";///ГЇГіГІГј ГЄ Г±ГЄГЁГ­Г Г¬
+	$cloakpath = "http://***.ru/cloaks/%s.png";///ГЇГіГІГј ГЄ ГЇГ«Г Г№Г Г¬
+	///ГЌГ Г±ГІГ°Г®Г©ГЄГЁ MySQL///
 	$mysql = array(
-		'server' => '',//хост
-		'username' => '',//имя пользователя
-		'password' => '',//пароль
-		'db' => '',//имя базы данных
-		'port' => '3306',///порт соединения
-		'charset' => 'UTF8'///кодировка вывода из БД (UTF8 или CP1251)
+		'server' => 'localhost',//ГµГ®Г±ГІ
+		'username' => 'id5644315_adm',//ГЁГ¬Гї ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї
+		'password' => 'admin',//ГЇГ Г°Г®Г«Гј
+		'db' => 'id5644315_commit',//ГЁГ¬Гї ГЎГ Г§Г» Г¤Г Г­Г­Г»Гµ
+		'port' => '3306',///ГЇГ®Г°ГІ Г±Г®ГҐГ¤ГЁГ­ГҐГ­ГЁГї
+		'charset' => 'UTF8'///ГЄГ®Г¤ГЁГ°Г®ГўГЄГ  ГўГ»ГўГ®Г¤Г  ГЁГ§ ГЃГ„ (UTF8 ГЁГ«ГЁ CP1251)
 	);
-	///Настройка лаунчера///
+	///ГЌГ Г±ГІГ°Г®Г©ГЄГ  Г«Г ГіГ­Г·ГҐГ°Г ///
     $prefs = array(
-		///настройки///
+		///Г­Г Г±ГІГ°Г®Г©ГЄГЁ///
         "main" => array(
-		    "title" => "Kek Launcher", //заголовок лаунчера
-			"ingame" => "Kek | %s",//заголовок окна игры
-		    "dir" => ".Kek",//корневая папка игры
-			"site" =>  $_SERVER["SERVER_NAME"]."/mine",//папка с вебчастью
-			///Без надобности - не трогать///
+		    "title" => "Kek Launcher", //Г§Г ГЈГ®Г«Г®ГўГ®ГЄ Г«Г ГіГ­Г·ГҐГ°Г 
+			"ingame" => "Kek | %s",//Г§Г ГЈГ®Г«Г®ГўГ®ГЄ Г®ГЄГ­Г  ГЁГЈГ°Г»
+		    "dir" => ".Kek",//ГЄГ®Г°Г­ГҐГўГ Гї ГЇГ ГЇГЄГ  ГЁГЈГ°Г»
+			"site" =>  $_SERVER["SERVER_NAME"]."/mine",//ГЇГ ГЇГЄГ  Г± ГўГҐГЎГ·Г Г±ГІГјГѕ
+			///ГЃГҐГ§ Г­Г Г¤Г®ГЎГ­Г®Г±ГІГЁ - Г­ГҐ ГІГ°Г®ГЈГ ГІГј///
 			"progs" => "goldencreeper,ceerror,pia3333,downforce,cheatengine,procexp,sysinternals,inclasstranslator,wpepro,httpanaly,jdgui,intercepter,batnik,po100b,xvi32,hacked,doos,zhyk,mmoru,HxD,clicker,autoclick,rsclient,easyscript,cffteam",
-            "dirs" => "texturepacks,resourcepacks,resources,saves",//папки, которые не проверяются лаунчером
-            "excl" => "killaura,kradxn,taehc,ddoss,kodehawa,freecam,speedhack,wallhack,ellian,xrayRender,speedMiner,antiAFK,X-Ray",//ЧС читов
-            "fails" => "classpath,loader,zipfile,jarfile,stringbuffer,file.class,inputstream,class.class,digest,system,runtime",//ЧС универсальных обходов
-            "formats" => "zip,jar,dll,litemod,exe,class,so,dylib,jnilib,bat,pkg",//проверяемые для удаления типы файлов
-			"locked" => "zip,jar,litemod,exe,class",//типы файлов, для которых блокируется запись
-			///Ниже можно, вообще, не трогать///
+            "dirs" => "texturepacks,resourcepacks,resources,saves",//ГЇГ ГЇГЄГЁ, ГЄГ®ГІГ®Г°Г»ГҐ Г­ГҐ ГЇГ°Г®ГўГҐГ°ГїГѕГІГ±Гї Г«Г ГіГ­Г·ГҐГ°Г®Г¬
+            "excl" => "killaura,kradxn,taehc,ddoss,kodehawa,freecam,speedhack,wallhack,ellian,xrayRender,speedMiner,antiAFK,X-Ray",//Г—Г‘ Г·ГЁГІГ®Гў
+            "fails" => "classpath,loader,zipfile,jarfile,stringbuffer,file.class,inputstream,class.class,digest,system,runtime",//Г—Г‘ ГіГ­ГЁГўГҐГ°Г±Г Г«ГјГ­Г»Гµ Г®ГЎГµГ®Г¤Г®Гў
+            "formats" => "zip,jar,dll,litemod,exe,class,so,dylib,jnilib,bat,pkg",//ГЇГ°Г®ГўГҐГ°ГїГҐГ¬Г»ГҐ Г¤Г«Гї ГіГ¤Г Г«ГҐГ­ГЁГї ГІГЁГЇГ» ГґГ Г©Г«Г®Гў
+			"locked" => "zip,jar,litemod,exe,class",//ГІГЁГЇГ» ГґГ Г©Г«Г®Гў, Г¤Г«Гї ГЄГ®ГІГ®Г°Г»Гµ ГЎГ«Г®ГЄГЁГ°ГіГҐГІГ±Гї Г§Г ГЇГЁГ±Гј
+			///ГЌГЁГ¦ГҐ Г¬Г®Г¦Г­Г®, ГўГ®Г®ГЎГ№ГҐ, Г­ГҐ ГІГ°Г®ГЈГ ГІГј///
 			"assets" => "assets",
-			"assetmode" => "1",///режим assets 0-выключить умную загрузку, 1-грузить в главном потоке, 2 - грузить в фоне
-			"assetver" => "1.2,1.3,1.4,1.5,1.6",///версии, на которых невозможна загрузка assets (1.6 добавлен, т.к. будет юзаться assets.pkg)
+			"assetmode" => "1",///Г°ГҐГ¦ГЁГ¬ assets 0-ГўГ»ГЄГ«ГѕГ·ГЁГІГј ГіГ¬Г­ГіГѕ Г§Г ГЈГ°ГіГ§ГЄГі, 1-ГЈГ°ГіГ§ГЁГІГј Гў ГЈГ«Г ГўГ­Г®Г¬ ГЇГ®ГІГ®ГЄГҐ, 2 - ГЈГ°ГіГ§ГЁГІГј Гў ГґГ®Г­ГҐ
+			"assetver" => "1.2,1.3,1.4,1.5,1.6",///ГўГҐГ°Г±ГЁГЁ, Г­Г  ГЄГ®ГІГ®Г°Г»Гµ Г­ГҐГўГ®Г§Г¬Г®Г¦Г­Г  Г§Г ГЈГ°ГіГ§ГЄГ  assets (1.6 Г¤Г®ГЎГ ГўГ«ГҐГ­, ГІ.ГЄ. ГЎГіГ¤ГҐГІ ГѕГ§Г ГІГјГ±Гї assets.pkg)
             "bin" => "bin",
             "config" => "config.cfg",
             "libs" => "libs",
@@ -48,43 +48,43 @@
             "natives" => "natives",
             "script" => "launch.php",
         ),
-		///сервера (название, ip, port, папка)
+		///Г±ГҐГ°ГўГҐГ°Г  (Г­Г Г§ГўГ Г­ГЁГҐ, ip, port, ГЇГ ГЇГЄГ )
         "servers" => array(
 		  'Kek,Kek.38.13.3,25565,kek,1.6.4',
 		  'Kek,Kek.38.13.3,25565,kek,1.6.4',
 		  'Kek,Kek.38.13.3,25565,kek,1.6.4',
 		  'Kek,Kek.38.13.3,25565,kek,1.6.4',
         ),
-		///Радиостанции (название, ссылка)
+		///ГђГ Г¤ГЁГ®Г±ГІГ Г­Г¶ГЁГЁ (Г­Г Г§ГўГ Г­ГЁГҐ, Г±Г±Г»Г«ГЄГ )
         "stations" => array(
-            "Европа +,http://radio.north.kz:8000/europaplus-128",
-            "Зайцев FM,http://radio.zaycev.fm:8999/ZaycevFM(128)",
+            "Г…ГўГ°Г®ГЇГ  +,http://radio.north.kz:8000/europaplus-128",
+            "Г‡Г Г©Г¶ГҐГў FM,http://radio.zaycev.fm:8999/ZaycevFM(128)",
             "Record Club,http://radio.muff.kiev.ua:8000/rrclub",
             "Record DubStep,http://radio.muff.kiev.ua:8000/rrdub",
             "Rock FM,http://mp3.nashe.ru/rock-128.mp3",
         ),
-		///Патчи (не трогать)///
+		///ГЏГ ГІГ·ГЁ (Г­ГҐ ГІГ°Г®ГЈГ ГІГј)///
 		"patches" => array(
-			///Системные патчи///
+			///Г‘ГЁГ±ГІГҐГ¬Г­Г»ГҐ ГЇГ ГІГ·ГЁ///
 			///'new:>start:>net.minecraft.launchwrapper.LaunchClassLoader:>runTransformers:>null:>{$args[0] = (byte[]) ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("transform0", new Class[]{String.class, String.class, byte[].class}).invoke(null, new Object[]{$args[0],$args[1],$args[2]});}:>null',
 			'new:>add:>net.minecraft.launchwrapper.LaunchClassLoader:>runTransformers:>null:>{return (byte[]) ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("transform", new Class[]{String.class, String.class, byte[].class}).invoke(null, new Object[]{$args[0],$args[1],$args[2]});}:>null',
 			'new:>start:>net.minecraft.launchwrapper.Launch:>launch:>null:>{ClassLoader.getSystemClassLoader().loadClass("net.minecraft.Launcher").getDeclaredMethod("getnew",new Class[0]).invoke(null,new Object[0]);}:>null',
 			'old:>add:>cpw.mods.fml.relauncher.RelaunchClassLoader:>runTransformers:>null:>{return (byte[]) ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("transform", new Class[]{String.class, String.class, byte[].class}).invoke(null, new Object[]{$args[0],$args[0],$args[1]});}:>null',
-			///Патчи защиты///
-			'1.4.6,1.4.7:>set:>ayh:>a:>java.lang.String,java.lang.String,java.lang.String:>{String s2 = null; try{s2 = (String) ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("auth", new Class[]{String.class, ClassLoader.class}).invoke(null, new Object[]{$args[2],ayh.class.getClassLoader()});} catch (Exception e) {e.printStackTrace();s2 = "Ошибка авторизации!";} return s2;}:>null',
-			'1.5.1,1.5.2:>set:>bdk:>a:>java.lang.String,java.lang.String,java.lang.String:>{String s2 = null; try{s2 = (String) ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("auth", new Class[]{String.class, ClassLoader.class}).invoke(null, new Object[]{$args[2],bdk.class.getClassLoader()});} catch (Exception e) {e.printStackTrace();s2 = "Ошибка авторизации!";} return s2;}:>null',
-			'1.6.1,1.6.2,1.6.4:>set:>bcw:>func_72550_a:>java.lang.String,java.lang.String,java.lang.String:>{String s2 = null; try{s2 = (String) ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("auth", new Class[]{String.class, ClassLoader.class}).invoke(null, new Object[]{$args[2],net.minecraft.client.multiplayer.NetClientHandler.class.getClassLoader()});} catch (Exception e) {e.printStackTrace();s2 = "Ошибка авторизации!";} return s2;}:>null',
+			///ГЏГ ГІГ·ГЁ Г§Г Г№ГЁГІГ»///
+			'1.4.6,1.4.7:>set:>ayh:>a:>java.lang.String,java.lang.String,java.lang.String:>{String s2 = null; try{s2 = (String) ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("auth", new Class[]{String.class, ClassLoader.class}).invoke(null, new Object[]{$args[2],ayh.class.getClassLoader()});} catch (Exception e) {e.printStackTrace();s2 = "ГЋГёГЁГЎГЄГ  Г ГўГІГ®Г°ГЁГ§Г Г¶ГЁГЁ!";} return s2;}:>null',
+			'1.5.1,1.5.2:>set:>bdk:>a:>java.lang.String,java.lang.String,java.lang.String:>{String s2 = null; try{s2 = (String) ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("auth", new Class[]{String.class, ClassLoader.class}).invoke(null, new Object[]{$args[2],bdk.class.getClassLoader()});} catch (Exception e) {e.printStackTrace();s2 = "ГЋГёГЁГЎГЄГ  Г ГўГІГ®Г°ГЁГ§Г Г¶ГЁГЁ!";} return s2;}:>null',
+			'1.6.1,1.6.2,1.6.4:>set:>bcw:>func_72550_a:>java.lang.String,java.lang.String,java.lang.String:>{String s2 = null; try{s2 = (String) ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("auth", new Class[]{String.class, ClassLoader.class}).invoke(null, new Object[]{$args[2],net.minecraft.client.multiplayer.NetClientHandler.class.getClassLoader()});} catch (Exception e) {e.printStackTrace();s2 = "ГЋГёГЁГЎГЄГ  Г ГўГІГ®Г°ГЁГ§Г Г¶ГЁГЁ!";} return s2;}:>null',
 			'1.6.1,1.6.2,1.6.4,1.7.2,1.7.10,1.8:>start:>org.lwjgl.opengl.Display:>setTitle:>java.lang.String:>{$1=System.getProperty("minecraft.title","Minecraft");}:>null',
 			'1.7.1,1.7.2,1.7.4,1.7.5,1.7.9,1.7.10,1.8:>set:>com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService:>joinServer:>null:>{try{ClassLoader.getSystemClassLoader().loadClass("net.k773.Auth").getDeclaredMethod("auth", new Class[]{String.class, ClassLoader.class}).invoke(null, new Object[]{$args[2],com.mojang.authlib.GameProfile.class.getClassLoader()});} catch (Exception e) {e.printStackTrace();} try{String url = (String) ClassLoader.getSystemClassLoader().loadClass("net.k773.Tools").getDeclaredMethod("createurl", new Class[]{String.class}).invoke(null, new Object[]{"j.php?user="+$args[1]}); getAuthenticationService().makeRequest(new java.net.URL(url), null, com.mojang.authlib.yggdrasil.response.Response.class);} catch (Exception e) {e.printStackTrace();}}:>com.mojang.authlib.GameProfile,com.mojang.authlib.yggdrasil.response.Response',
-			///Патчи скинов для 1.6.x/1.7.2///
+			///ГЏГ ГІГ·ГЁ Г±ГЄГЁГ­Г®Гў Г¤Г«Гї 1.6.x/1.7.2///
 			//'1.6.1,1.6.2,1.6.4,1.7.2:>set:>net.minecraft.client.entity.AbstractClientPlayer:>func_110300_d:>java.lang.String:>{return ("'.$skinpath.'").replace("%s",(String) $args[0]);}:>null',
 			//'1.6.1,1.6.2,1.6.4,1.7.2:>set:>net.minecraft.client.entity.AbstractClientPlayer:>func_110308_e:>java.lang.String:>{return ("'.$cloakpath.'").replace("%s",(String) $args[0]);}:>null',
-			///Прочие патчи///
+			///ГЏГ°Г®Г·ГЁГҐ ГЇГ ГІГ·ГЁ///
 			'1.4.6,1.4.7,1.5.2:>set:>cpw.mods.fml.common.discovery.ModDiscoverer:>findClasspathMods:>cpw.mods.fml.common.ModClassLoader:>{return;}:>method',
 			'old:>add:>cpw.mods.fml.relauncher.FMLRelauncher:>showWindow:>null:>{popupWindow.setVisible(false);}:>method',
 		),
     );
-	///Настройки дизайна///
+	///ГЌГ Г±ГІГ°Г®Г©ГЄГЁ Г¤ГЁГ§Г Г©Г­Г ///
  $design = array(
         'banners' => array(
             '880,29,204,34,,gray,banners/logo,14,http://,1,',
@@ -94,19 +94,19 @@
             'closeingame' => '278,244,18,18,,white,closemin,16',
             'hide' => '802,11,9,18,,gray,hide,16,',
             'hideingame' => '262,244,18,18,,white,hidemin,16',
-            'memory' => '651,11,125,23,Выбор ОЗУ,black,memory,16,',
+            'memory' => '651,11,125,23,Г‚Г»ГЎГ®Г° ГЋГ‡Г“,black,memory,16,',
             'news' => '14,61,276,306,http://site.ru,white,newsbg,0,',
             'online' => '537,76,297,306,http://site.ru,white,newsbg,0,',
-            'togame' => '394,454,190,40,Начать игру,white,button,18,',
+            'togame' => '394,454,190,40,ГЌГ Г·Г ГІГј ГЁГЈГ°Гі,white,button,18,',
         ),
         'checkbox' => array(
-            'autoenter' => '194,449,200,17, Автозаход на сервер,gray,checkbox,14,',
-            'conf' => '605,440,200,17, Сбросить конфиги,gray,checkbox,14,',
-            'fullscreen' => '605,461,200,17, Полноэкранный режим,gray,checkbox,14,',
+            'autoenter' => '194,449,200,17, ГЂГўГІГ®Г§Г ГµГ®Г¤ Г­Г  Г±ГҐГ°ГўГҐГ°,gray,checkbox,14,',
+            'conf' => '605,440,200,17, Г‘ГЎГ°Г®Г±ГЁГІГј ГЄГ®Г­ГґГЁГЈГЁ,gray,checkbox,14,',
+            'fullscreen' => '605,461,200,17, ГЏГ®Г«Г­Г®ГЅГЄГ°Г Г­Г­Г»Г© Г°ГҐГ¦ГЁГ¬,gray,checkbox,14,',
             'play' => '662,550,32,26,,gray,radio,14,',
             'playingame' => '6,263,32,26,,gray,radio,14',
-            'savepass' => '194,430,193,17, Запомнить пароль,gray,checkbox,14,',
-            'upd' => '194,469,196,17, Перекачать клиент,gray,checkbox,14,',
+            'savepass' => '194,430,193,17, Г‡Г ГЇГ®Г¬Г­ГЁГІГј ГЇГ Г°Г®Г«Гј,gray,checkbox,14,',
+            'upd' => '194,469,196,17, ГЏГҐГ°ГҐГЄГ Г·Г ГІГј ГЄГ«ГЁГҐГ­ГІ,gray,checkbox,14,',
         ),
         'dropdown' => array(
             'servers' => '395,424,190,26,gray,servers,14,1,',
@@ -129,46 +129,46 @@
         ),
     );
 	
-	///Таблица авторизации движка///
-	$db_table       	= "dle_users"; //Таблица с пользователями
-	$column_User  		= "name"; //Колонка с именами пользователей
-	$column_Pass  		= "password"; //Колонка с паролями пользователей
-	$db_tableOther 		= 'xf_user_authenticate'; //Дополнительная таблица для XenForo, не трогайте
-	$column_Salt  	= 'members_pass_salt'; //Настраивается для IPB и vBulletin: , IPB - members_pass_salt, vBulletin - salt
+	///Г’Г ГЎГ«ГЁГ¶Г  Г ГўГІГ®Г°ГЁГ§Г Г¶ГЁГЁ Г¤ГўГЁГ¦ГЄГ ///
+	$db_table       	= "dle_users"; //Г’Г ГЎГ«ГЁГ¶Г  Г± ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«ГїГ¬ГЁ
+	$column_User  		= "name"; //ГЉГ®Г«Г®Г­ГЄГ  Г± ГЁГ¬ГҐГ­Г Г¬ГЁ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«ГҐГ©
+	$column_Pass  		= "password"; //ГЉГ®Г«Г®Г­ГЄГ  Г± ГЇГ Г°Г®Г«ГїГ¬ГЁ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«ГҐГ©
+	$db_tableOther 		= 'xf_user_authenticate'; //Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г Гї ГІГ ГЎГ«ГЁГ¶Г  Г¤Г«Гї XenForo, Г­ГҐ ГІГ°Г®ГЈГ Г©ГІГҐ
+	$column_Salt  	= 'members_pass_salt'; //ГЌГ Г±ГІГ°Г ГЁГўГ ГҐГІГ±Гї Г¤Г«Гї IPB ГЁ vBulletin: , IPB - members_pass_salt, vBulletin - salt
 	
-	///Таблица авторизации лаунчера///
-	$db_auth       		= "auth"; //Таблица авторизации
-	$column_id  		= "id";///колонка id: varchar(32)
-	$column_login  		= "login";///колонка логина: varchar(32)
-	$column_os  		= "os";///колонка логина: varchar(32)
-	$column_arch  		= "arch";///колонка логина: varchar(32)
-	$column_salt  		= "salt";///колонка соль авторизации тип: varchar(32)
-	$column_Time  		= "timestamp";///колонка времени тип: varchar(32)
-	$column_Group 		= "user_group";///колонка группы dle (для привязки) тип: varchar(32)
-	$column_HWID  		= "hwid";////колонка id железа тип: varchar(32)
-	$column_HWID2  		= "hwid2";////колонка id железа тип: varchar(32)
-	$column_SesId	 	= "session"; ///колонка сессии тип: varchar(32)
-	$column_Server		= "server"; ///колонка id сервера тип: varchar(255)
-	$column_Priv		= "priv"; ///колонка привязки по железу: int(1) 0-нет,1-да
+	///Г’Г ГЎГ«ГЁГ¶Г  Г ГўГІГ®Г°ГЁГ§Г Г¶ГЁГЁ Г«Г ГіГ­Г·ГҐГ°Г ///
+	$db_auth       		= "auth"; //Г’Г ГЎГ«ГЁГ¶Г  Г ГўГІГ®Г°ГЁГ§Г Г¶ГЁГЁ
+	$column_id  		= "id";///ГЄГ®Г«Г®Г­ГЄГ  id: varchar(32)
+	$column_login  		= "login";///ГЄГ®Г«Г®Г­ГЄГ  Г«Г®ГЈГЁГ­Г : varchar(32)
+	$column_os  		= "os";///ГЄГ®Г«Г®Г­ГЄГ  Г«Г®ГЈГЁГ­Г : varchar(32)
+	$column_arch  		= "arch";///ГЄГ®Г«Г®Г­ГЄГ  Г«Г®ГЈГЁГ­Г : varchar(32)
+	$column_salt  		= "salt";///ГЄГ®Г«Г®Г­ГЄГ  Г±Г®Г«Гј Г ГўГІГ®Г°ГЁГ§Г Г¶ГЁГЁ ГІГЁГЇ: varchar(32)
+	$column_Time  		= "timestamp";///ГЄГ®Г«Г®Г­ГЄГ  ГўГ°ГҐГ¬ГҐГ­ГЁ ГІГЁГЇ: varchar(32)
+	$column_Group 		= "user_group";///ГЄГ®Г«Г®Г­ГЄГ  ГЈГ°ГіГЇГЇГ» dle (Г¤Г«Гї ГЇГ°ГЁГўГїГ§ГЄГЁ) ГІГЁГЇ: varchar(32)
+	$column_HWID  		= "hwid";////ГЄГ®Г«Г®Г­ГЄГ  id Г¦ГҐГ«ГҐГ§Г  ГІГЁГЇ: varchar(32)
+	$column_HWID2  		= "hwid2";////ГЄГ®Г«Г®Г­ГЄГ  id Г¦ГҐГ«ГҐГ§Г  ГІГЁГЇ: varchar(32)
+	$column_SesId	 	= "session"; ///ГЄГ®Г«Г®Г­ГЄГ  Г±ГҐГ±Г±ГЁГЁ ГІГЁГЇ: varchar(32)
+	$column_Server		= "server"; ///ГЄГ®Г«Г®Г­ГЄГ  id Г±ГҐГ°ГўГҐГ°Г  ГІГЁГЇ: varchar(255)
+	$column_Priv		= "priv"; ///ГЄГ®Г«Г®Г­ГЄГ  ГЇГ°ГЁГўГїГ§ГЄГЁ ГЇГ® Г¦ГҐГ«ГҐГ§Гі: int(1) 0-Г­ГҐГІ,1-Г¤Г 
 	
-	///Расширения файлов, к которым чувствительно обновление///
+	///ГђГ Г±ГёГЁГ°ГҐГ­ГЁГї ГґГ Г©Г«Г®Гў, ГЄ ГЄГ®ГІГ®Г°Г»Г¬ Г·ГіГўГ±ГІГўГЁГІГҐГ«ГјГ­Г® Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ///
 	$form				= array('jar','zip','ass','dll','dat','mod','mp3','yml','txt','.so','pkg','lib');
 	
-	///Информация о классе защиты///
-	$class 				= "ddgdfgggfg.class";///относительный путь до класса защиты
+	///Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї Г® ГЄГ«Г Г±Г±ГҐ Г§Г Г№ГЁГІГ»///
+	$class 				= "ddgdfgggfg.class";///Г®ГІГ­Г®Г±ГЁГІГҐГ«ГјГ­Г»Г© ГЇГіГІГј Г¤Г® ГЄГ«Г Г±Г±Г  Г§Г Г№ГЁГІГ»
 	$classname 			= "net.k773.a";
 	$method 			= "k";
 	
-	///Антибрут///
+	///ГЂГ­ГІГЁГЎГ°ГіГІ///
 	$debmode			= array("K773");
-	$ac 				= 3;///кол-во аккаунтов на одно железо
-	$stime 				= 10;///время жизни сессии в секундах
-	$cache				= 100;///время обновления мониторинга
-	$bancheck			= false;///включена ли проверка на бан
-	$brute_check 		= true;////включена ли проверка на брут
+	$ac 				= 3;///ГЄГ®Г«-ГўГ® Г ГЄГЄГ ГіГ­ГІГ®Гў Г­Г  Г®Г¤Г­Г® Г¦ГҐГ«ГҐГ§Г®
+	$stime 				= 10;///ГўГ°ГҐГ¬Гї Г¦ГЁГ§Г­ГЁ Г±ГҐГ±Г±ГЁГЁ Гў Г±ГҐГЄГіГ­Г¤Г Гµ
+	$cache				= 100;///ГўГ°ГҐГ¬Гї Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГї Г¬Г®Г­ГЁГІГ®Г°ГЁГ­ГЈГ 
+	$bancheck			= false;///ГўГЄГ«ГѕГ·ГҐГ­Г  Г«ГЁ ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  ГЎГ Г­
+	$brute_check 		= true;////ГўГЄГ«ГѕГ·ГҐГ­Г  Г«ГЁ ГЇГ°Г®ГўГҐГ°ГЄГ  Г­Г  ГЎГ°ГіГІ
 	$brute_table 		= "brute";
-	$ip 				= $_SERVER["REMOTE_ADDR"];///вычисляем ip
-	$brute_time 		= 15;////время в секундах, на сколько будет блокироваться доступ
+	$ip 				= $_SERVER["REMOTE_ADDR"];///ГўГ»Г·ГЁГ±Г«ГїГҐГ¬ ip
+	$brute_time 		= 15;////ГўГ°ГҐГ¬Гї Гў Г±ГҐГЄГіГ­Г¤Г Гµ, Г­Г  Г±ГЄГ®Г«ГјГЄГ® ГЎГіГ¤ГҐГІ ГЎГ«Г®ГЄГЁГ°Г®ГўГ ГІГјГ±Гї Г¤Г®Г±ГІГіГЇ
 	
 	$cnews 				= false;
 	$cplayers			= true;
